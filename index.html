@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Form</h1>
+
+        <table id="inputTable" border="2">
+            <!-- <form > -->
+            <tr>
+                <td><strong>Name</strong></td>
+                <td><input id="inpName" type="text"></td>
+            </tr>
+            <tr>
+                <td><strong>Age</strong></td>
+                <td><input id="inpAge" type="number"></td>
+            </tr>
+            <tr>
+                <td><strong>Gender</strong></td>
+                <td>
+                    <form id="myForm" onchange="selectGender(event)">
+                        <label>
+                            <input type="radio" name="gender" value="Male">Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Female">Female
+                        </label>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Course</strong></td>
+                <td>
+                    <select onchange="selectCourse(event)">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Java">Java</option>
+                        <option value="c++">c++</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td><input id="inpEmail" type="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2" onclick="update()"><button>Save</button></td>
+            </tr>
+            <!-- </form> -->
+        </table>
+
+        <!-- <form> -->
+        <table border="2" id="infoTable">
+            <tr>
+                <td>NAME</td>
+                <td>AGE</td>
+                <td>COURSE</td>
+                <td>GENDER</td>
+                <td>EMAIL</td>
+                <td>ACTION</td>
+            </tr>
+
+        </table>
+        <!-- </form> -->
+    </div>
+</body>
+
+</html>
